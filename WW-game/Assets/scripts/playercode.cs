@@ -7,7 +7,6 @@ public class Player : MonoBehaviour
 {
     public InventoryItem[] inventoryItems;
     public Canvas menuCanvas;
-    public Text inventoryText;
 
     void Start()
     {
@@ -47,7 +46,6 @@ public class Player : MonoBehaviour
                 inventoryInfo += item.itemName + " - " + item.quantity + "\n";
             }
         }
-        inventoryText.text = inventoryInfo;
     }
 
     public void AddItemToInventory(string itemName, int amount = 1)
