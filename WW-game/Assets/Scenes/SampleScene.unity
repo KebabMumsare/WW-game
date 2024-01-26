@@ -262,7 +262,11 @@ GameObject:
   - component: {fileID: 706416192}
   - component: {fileID: 706416196}
   m_Layer: 0
+<<<<<<< Updated upstream
   m_Name: playerBody
+=======
+  m_Name: player body
+>>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
