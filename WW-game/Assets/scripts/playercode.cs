@@ -2,31 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventoryItem
+public class Player : MonoBehaviour
 {
-    public string itemName;
-    public GameObject player; 
-    public int quantity;
-}
-
-public class Inventory : MonoBehaviour
-{
-    public InventoryItem[] items;
-    public GameObject player; 
+    public InventoryItem[] inventoryItems;
 
     void Start()
     {
-        items = new InventoryItem[5];
-        items[0] = new InventoryItem { itemName = "intropapper", player = player, quantity = 1 };
-        player = GameObject.FindGameObjectWithTag("Player");
+        inventoryItems = new InventoryItem[5];
+        inventoryItems[0] = new InventoryItem { itemName = "intropapper", player = gameObject, quantity = 1 };
     }
 
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            AddItemToInventory("SomeItem", 3);
+        }
     }
 
-    public void AddItem(string itemName, int amount = 1)
+    public void AddItemToInventory(string itemName, int amount = 1)
     {
         InventoryItem item = FindItem(itemName);
 
@@ -43,13 +37,15 @@ public class Inventory : MonoBehaviour
 
     private InventoryItem FindItem(string itemName)
     {
-        foreach (InventoryItem item in items)
+        foreach (InventoryItem item in inventoryItems)
         {
-            if (item.itemName == itemName)
+            if (item != null && item.itemName == itemName)
             {
                 return item;
             }
         }
         return null;
     }
+
+
 }
