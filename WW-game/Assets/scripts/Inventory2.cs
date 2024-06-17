@@ -24,12 +24,7 @@ public class Inventory2 : MonoBehaviour
         {
             if (itemsInventory[i] == null)
             {
-                if (item.name.Contains("(Clone)"))
-                {
-                    item.name = item.name.Replace("(Clone)", "").Trim();
-                    itemsInventory[i] = item;
-                }
-                
+                itemsInventory[i] = item;
                 break;
             }
         }

@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - papper
+  - item
+  - interact
+  - NPC
+  - "H\xE4st"
+  - NPC Body
   layers:
   - Default
   - TransparentFX

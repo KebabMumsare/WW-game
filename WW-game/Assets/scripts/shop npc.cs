@@ -30,8 +30,7 @@ public class BuyItemButton : MonoBehaviour
         if (money.money >= price1) 
         {
             money.money -= price1;
-            Instantiate(item, itemSpawn.transform.position, Quaternion.identity).SetActive(true);
-          
+            Instantiate(item, itemSpawn.transform.position, Quaternion.identity);
         }
         else
         {
