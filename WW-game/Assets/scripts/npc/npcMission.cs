@@ -24,14 +24,26 @@ public class npcMission : MonoBehaviour
     }
     public void acceptMission()
     {
-        npcDC.text = "Kan du köpa en revolver till mig";
-        npcDC.alternativ1 = "Jag fixar";
-        npcDC.alternativ2 = "Nej";
+        if (npcDC != null)
+        {
+            
+            npcDC.text = "Kan du köpa en revolver till mig";
+            npcDC.alternativ1 = "Jag fixar";
+            npcDC.alternativ2 = "Nej";
+            Debug.Log("Mission accept");
+        }
+
     }
     public void denyMission()
     {
-        npcDC.text = "Du luktar kiss";
-        npcDC.alternativ1 = "Hur viste du";
-        npcDC.alternativ2 = "Nej";
+        if (npcDC != null)
+        {
+            
+            npcDC.text = "Du luktar kiss";
+            npcDC.alternativ1 = "Hur viste du";
+            npcDC.alternativ2 = "Nej";
+            Debug.Log("Mission deny");
+        }
+        
     }
 }
